@@ -3,9 +3,6 @@ from matplotlib import pyplot as plt
 import numpy as np
 
 
-
-
-
 def simple_mandelbrot(
     width, height, real_low, real_high, imag_low, imag_high, max_iters, upper_bound
 ):
@@ -71,9 +68,7 @@ if __name__ == "__main__":
 
     t21 = time()
     fig, ax = plt.subplots(1, 1, figsize=(5 * 1, 5 * 1))
-    im = ax.imshow(
-        mandel, extent=(real_low, real_high, imag_low, imag_high)
-    )
+    im = ax.imshow(mandel, extent=(real_low, real_high, imag_low, imag_high))
     ax.set_xlabel(r"$\Re(z)$")
     ax.set_ylabel(r"$\Im(z)$")
     ax.set_title("Mandelbrot Set")
